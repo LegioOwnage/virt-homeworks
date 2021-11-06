@@ -37,6 +37,10 @@
 - Ansible
 
 *Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.*
+  Ответ: ![image](https://user-images.githubusercontent.com/89036206/140616038-6e898a69-29f8-405f-9517-e04cba7cc36f.png)
+![image](https://user-images.githubusercontent.com/89036206/140616063-6ca5381b-5aa9-456d-b25d-027816c264b6.png)
+![image](https://user-images.githubusercontent.com/89036206/140616049-d6810354-cf3b-43ff-afb9-da4a9a6c8cc1.png)
+
 
 ## Задача 4 (*)
 
