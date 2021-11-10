@@ -56,3 +56,5 @@
 ```
 docker ps
 ```
+Ответ: До конца не разобрался, из под wsl такая ошибка:
+![image](https://user-images.githubusercontent.com/89036206/141181710-74a563ec-2145-4778-8291-584c3ea5a4a7.png)
