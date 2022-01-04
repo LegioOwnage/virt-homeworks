@@ -35,6 +35,11 @@
   <img width="1200" height="600" src="./assets/yc_02.png">
 </p>
 
+Ответ: При попытке развернуть ansible-playbook возникает ошибка. Прошу помочь разбраться, почему не устанавливаются приложения. 
+![Screenshot from 2022-01-03 19-43-14](https://user-images.githubusercontent.com/89036206/148116099-0ae1721d-0b9d-4928-9b08-0eb786722510.png)
+![Screenshot from 2022-01-03 19-43-31](https://user-images.githubusercontent.com/89036206/148116207-5e8efaa5-7e55-4e2a-938b-adeea432e5d2.png)
+
+
 ## Задача 4 (*)
 
 Создать вторую ВМ и подключить её к мониторингу развёрнутому на первом сервере.
