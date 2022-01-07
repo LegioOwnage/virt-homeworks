@@ -38,6 +38,11 @@
 Ответ: При попытке развернуть ansible-playbook возникает ошибка. Прошу помочь разбраться, почему не устанавливаются приложения. 
 ![Screenshot from 2022-01-03 19-43-14](https://user-images.githubusercontent.com/89036206/148116099-0ae1721d-0b9d-4928-9b08-0eb786722510.png)
 ![Screenshot from 2022-01-03 19-43-31](https://user-images.githubusercontent.com/89036206/148116207-5e8efaa5-7e55-4e2a-938b-adeea432e5d2.png)
+Изменения provision на эти помогли (спасибо подсказке из slack), но почему так произошло и в чем суть изменений до конца не разобрался, прошу пояснить.
+![Screenshot from 2022-01-07 18-34-06](https://user-images.githubusercontent.com/89036206/148567338-91015699-df41-41a8-8cf4-df6d9e7ed14c.png)
+Ну и сам ответ на дз:
+![Screenshot from 2022-01-07 18-30-28](https://user-images.githubusercontent.com/89036206/148567414-3bd713b0-aec8-4713-8d5e-a696e4ff3e8d.png)
+
 
 
 ## Задача 4 (*)
