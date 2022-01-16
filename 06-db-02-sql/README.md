@@ -12,6 +12,10 @@
 
 Приведите получившуюся команду или docker-compose манифест.
 
+Ответ:
+![Screenshot from 2022-01-16 20-06-23](https://user-images.githubusercontent.com/89036206/149670142-52c81388-6ea3-4d51-8745-1c7f545d3dda.png)
+
+
 ## Задача 2
 
 В БД из задачи 1: 
