@@ -84,6 +84,11 @@ SQL-запрос для выдачи списка пользователей с 
     - запросы 
     - результаты их выполнения.
 
+Ответ:
+![Screenshot from 2022-01-19 11-47-32](https://user-images.githubusercontent.com/89036206/150096810-ab1f02d5-ca97-4970-9ec8-cb8f0e8d4729.png)
+![Screenshot from 2022-01-19 11-52-34](https://user-images.githubusercontent.com/89036206/150096826-05146e37-9f99-4ccd-9aec-433553a2cd93.png)
+
+
 ## Задача 4
 
 Часть пользователей из таблицы clients решили оформить заказы из таблицы orders.
