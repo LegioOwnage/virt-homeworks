@@ -15,6 +15,9 @@
 Ответ:
 ![Screenshot from 2022-01-16 20-06-23](https://user-images.githubusercontent.com/89036206/149670142-52c81388-6ea3-4d51-8745-1c7f545d3dda.png)
 
+Подскажите, где ошибка в манифесте? Впринципе обошелся без него, но с ним проще.
+![Screenshot from 2022-01-16 19-29-48](https://user-images.githubusercontent.com/89036206/150637144-9404d2fc-5499-4fbc-a54a-f9e24c8fa081.png)
+
 
 ## Задача 2
 
