@@ -26,6 +26,8 @@
 
 Ответ:
 ![Screenshot from 2022-01-23 12-30-52](https://user-images.githubusercontent.com/89036206/150672529-135ed9fc-724d-42ec-ae2e-7462d4d62c6a.png)
+![Screenshot from 2022-01-23 12-30-52](https://user-images.githubusercontent.com/89036206/150672604-62e86c0e-4660-4a02-b7ce-c57d9a3b2e55.png)
+
 
 
 ## Задача 2
