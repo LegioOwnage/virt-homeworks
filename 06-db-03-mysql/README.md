@@ -82,6 +82,9 @@
 
 Приведите в ответе измененный файл `my.cnf`.
 
+Ответ:
+![Screenshot from 2022-01-30 22-21-22](https://user-images.githubusercontent.com/89036206/151714249-7d0f81ce-2073-4b6c-a84b-e255aa40ac5d.png)
+
 ---
 
 ### Как оформить ДЗ?
