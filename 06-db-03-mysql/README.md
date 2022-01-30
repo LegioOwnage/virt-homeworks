@@ -46,6 +46,13 @@
 Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и 
 **приведите в ответе к задаче**.
 
+Ответ:
+![Screenshot from 2022-01-30 20-06-54](https://user-images.githubusercontent.com/89036206/151711661-458e9c8e-b51c-4041-8d8b-8951ae872756.png)
+![Screenshot from 2022-01-30 20-07-17](https://user-images.githubusercontent.com/89036206/151711676-3d7d3f03-d64c-4b33-bd2a-813af0a9d218.png)
+![Screenshot from 2022-01-30 21-08-09](https://user-images.githubusercontent.com/89036206/151711754-fee4bf69-ab3c-421d-967e-b87349aa82d4.png)
+![Screenshot from 2022-01-30 20-06-17](https://user-images.githubusercontent.com/89036206/151711690-f4b3d5f3-dd0c-4521-b7e2-a83e64c96c89.png)
+
+
 ## Задача 3
 
 Установите профилирование `SET profiling = 1`.
@@ -56,6 +63,11 @@
 Измените `engine` и **приведите время выполнения и запрос на изменения из профайлера в ответе**:
 - на `MyISAM`
 - на `InnoDB`
+
+Ответ:
+![Screenshot from 2022-01-30 20-58-59](https://user-images.githubusercontent.com/89036206/151711772-c3441e2d-c74b-468a-a927-28f9c88191f0.png)
+![Screenshot from 2022-01-30 21-04-48](https://user-images.githubusercontent.com/89036206/151711776-d6a04ed6-ad87-4d6d-b867-faa8efba406b.png)
+
 
 ## Задача 4 
 
