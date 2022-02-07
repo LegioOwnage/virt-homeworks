@@ -19,12 +19,15 @@
 ![Screenshot from 2022-02-06 20-14-15](https://user-images.githubusercontent.com/89036206/152692471-91addbb9-057d-4c09-89ce-18bb3de03ef4.png)
 
 - вывода списка таблиц
+
 \dt
 
 - вывода описания содержимого таблиц
+
 \d[S+] NAME
 
 - выхода из psql
+
 \q
 
 
