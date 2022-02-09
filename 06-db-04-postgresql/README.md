@@ -75,6 +75,10 @@
 
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
 
+Ответ:
+root@f7cbbcf2bb88:/volume# pg_dump -U postgres test_database > test_dump_2.sql
+
+
 ---
 
 ### Как cдавать задание
