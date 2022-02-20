@@ -1,0 +1,24 @@
+FROM centos:7
+ 
+ENV DEBIAN_FRONTEND=noninteractive
+ 
+RUN rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+RUN echo "[elasticsearch]" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "name=Elasticsearch repository for 8.x packages" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "baseurl=https://artifacts.elastic.co/packages/8.x/yum" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "gpgcheck=1" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "enabled=0" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "autorefresh=1" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "type=rpm-md" >>/etc/yum.repos.d/elasticsearch.repo
+ 
+RUN yum install -y --enablerepo=elasticsearch elasticsearch
+ 
+USER elasticsearch 
+ 
+CMD ["elasticsearch"] 
+CMD ["usr/sbin/init"]
+
+ENV PATH=$PATH:/usr/share/elasticsearch/bin
+
+EXPOSE 9200 9300
