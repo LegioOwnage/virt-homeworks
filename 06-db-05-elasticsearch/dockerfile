@@ -19,4 +19,6 @@ USER elasticsearch
 
 #CMD ["elasticsearch"]
 
+ENV PATH=$PATH:/usr/share/elasticsearch/bin
+
 EXPOSE 9200 9300
