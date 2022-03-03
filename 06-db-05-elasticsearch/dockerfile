@@ -12,7 +12,7 @@ RUN echo "[elasticsearch]" >>/etc/yum.repos.d/elasticsearch.repo &&\
 
 RUN yum install -y --enablerepo=elasticsearch elasticsearch
 
-#COPY elasticsearch.yml /etc/elasticsearch/
+COPY elasticsearch.yml /etc/elasticsearch/
 
 USER elasticsearch
 
