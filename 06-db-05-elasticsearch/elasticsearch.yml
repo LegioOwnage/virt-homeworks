@@ -106,11 +106,11 @@ xpack.security.transport.ssl:
   truststore.path: certs/transport.p12
 # Create a new cluster with the current node only
 # Additional nodes can still join the cluster later
-cluster.initial_master_nodes: ["14a618135b9c"]
+cluster.initial_master_nodes: ["netology_test"]
 
 # Allow HTTP API connections from localhost and local networks
 # Connections are encrypted and require user authentication
-http.host: [_local_, _site_]
+#http.host: [_local_, _site_]
 
 # Allow other nodes to join the cluster from localhost and local networks
 # Connections are encrypted and mutually authenticated
