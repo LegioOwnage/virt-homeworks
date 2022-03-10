@@ -84,9 +84,6 @@ curl -u elastic:elastic 127.0.0.1:9200
   "tagline" : "You Know, for Search"
 }
 
-
-
-
 ## Задача 2
 
 В этом задании вы научитесь:
