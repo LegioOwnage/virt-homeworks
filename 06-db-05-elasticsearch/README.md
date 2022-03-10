@@ -34,7 +34,7 @@
 Ответ: 
 
 - текст Dockerfile манифеста:
-
+```bash
 FROM centos:7
 
 RUN rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
@@ -60,11 +60,11 @@ ENV PATH=$PATH:/usr/share/elasticsearch/bin
 CMD ["elasticsearch"]
 
 EXPOSE 9200 9300
-
+```
 - ссылку на образ в репозитории dockerhub: https://hub.docker.com/r/legioownage/elasticsearch_netology
 
 - ответ `elasticsearch` на запрос пути `/` в json виде:
-
+```bash
 curl -u elastic:elastic 127.0.0.1:9200
 {
   "name" : "netology_test",
@@ -83,6 +83,7 @@ curl -u elastic:elastic 127.0.0.1:9200
   },
   "tagline" : "You Know, for Search"
 }
+```
 
 ## Задача 2
 
