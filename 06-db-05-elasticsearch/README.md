@@ -31,6 +31,42 @@
 
 Далее мы будем работать с данным экземпляром elasticsearch.
 
+Ответ: 
+
+-текст Dockerfile манифеста:
+
+FROM centos:7
+
+RUN rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+RUN echo "[elasticsearch]" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "name=Elasticsearch repository for 8.x packages" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "baseurl=https://artifacts.elastic.co/packages/8.x/yum" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "gpgcheck=1" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "enabled=0" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "autorefresh=1" >>/etc/yum.repos.d/elasticsearch.repo &&\
+    echo "type=rpm-md" >>/etc/yum.repos.d/elasticsearch.repo
+
+RUN yum install -y --enablerepo=elasticsearch elasticsearch
+
+ADD elasticsearch.yml /etc/elasticsearch/
+
+RUN chown -R root:elasticsearch /etc/elasticsearch/
+
+USER elasticsearch
+
+ENV PATH=$PATH:/usr/share/elasticsearch/bin
+
+CMD ["elasticsearch"]
+
+EXPOSE 9200 9300
+
+- ссылку на образ в репозитории dockerhub: https://hub.docker.com/r/legioownage/elasticsearch_netology
+
+- ответ `elasticsearch` на запрос пути `/` в json виде:
+
+
+
 ## Задача 2
 
 В этом задании вы научитесь:
