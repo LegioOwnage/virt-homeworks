@@ -33,7 +33,7 @@
 
 Ответ: 
 
--текст Dockerfile манифеста:
+- текст Dockerfile манифеста:
 
 FROM centos:7
 
@@ -64,6 +64,26 @@ EXPOSE 9200 9300
 - ссылку на образ в репозитории dockerhub: https://hub.docker.com/r/legioownage/elasticsearch_netology
 
 - ответ `elasticsearch` на запрос пути `/` в json виде:
+
+curl -u elastic:elastic 127.0.0.1:9200
+{
+  "name" : "netology_test",
+  "cluster_name" : "netology_cluster",
+  "cluster_uuid" : "XeZuwkNIRte4ieckPVyERA",
+  "version" : {
+    "number" : "8.1.0",
+    "build_flavor" : "default",
+    "build_type" : "rpm",
+    "build_hash" : "3700f7679f7d95e36da0b43762189bab189bc53a",
+    "build_date" : "2022-03-03T14:20:00.690422633Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.0.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+
 
 
 
