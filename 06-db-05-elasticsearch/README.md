@@ -114,6 +114,21 @@ curl -u elastic:elastic 127.0.0.1:9200
 При проектировании кластера elasticsearch нужно корректно рассчитывать количество реплик и шард,
 иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
 
+Ответ:
+```json
+curl -X PUT http://127.0.0.1:9200/ind-1 -H 'Content-Type: application/json' -d '{"settings": {"number_of_shards": 1, "number_of_replicas": 0}}'
+{"acknowledged":true,"shards_acknowledged":true,"index":"ind-1"}
+curl -X PUT http://127.0.0.1:9200/ind-2 -H 'Content-Type: application/json' -d '{"settings": {"number_of_shards": 2, "number_of_replicas": 1}}'
+{"acknowledged":true,"shards_acknowledged":true,"index":"ind-2"}
+curl -X PUT http://127.0.0.1:9200/ind-3 -H 'Content-Type: application/json' -d '{"settings": {"number_of_shards": 4, "number_of_replicas": 2}}'
+{"acknowledged":true,"shards_acknowledged":true,"index":"ind-3"}
+curl -X GET 'http://127.0.0.1:9200/_cat/indices?v'
+health status index uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   ind-1 ef2m-SKIS6O35NF0nSu1zQ   1   0          0            0       225b           225b
+yellow open   ind-3 8S2auZXvQxWIgib8eFTpWA   4   2          0            0       900b           900b
+yellow open   ind-2 apG5w2hLS8CYW2LX8y7HHg   2   1          0            0       450b           450b
+```
+
 ## Задача 3
 
 В данном задании вы научитесь:
