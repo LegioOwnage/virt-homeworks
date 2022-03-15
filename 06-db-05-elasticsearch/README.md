@@ -176,7 +176,13 @@ curl -X DELETE 'http://127.0.0.1:9200/ind-3'
 Ответ:
 ```bash
 echo "path.repo: /var/lib/elasticsearch/snapshots" >> elasticsearch.yml
-
+```
+```json
+curl -X PUT http://127.0.0.1:9200/_snapshot/netology_backup -H 'Content-Type: application/json' -d '{"type": "fs", "settings": {"location": "/var/lib/elasticsearch/snapshots"}}'
+{"acknowledged":true}
+curl -X PUT http://127.0.0.1:9200/test -H 'Content-Type: application/json' -d'{"settings": {"number_of_shards": 1, "number_of_replicas": 0}}'
+{"acknowledged":true,"shards_acknowledged":true,"index":"test"}
+```
 
 ### Как cдавать задание
 
