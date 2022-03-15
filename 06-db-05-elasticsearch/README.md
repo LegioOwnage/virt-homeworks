@@ -131,7 +131,14 @@ curl -X GET 'http://127.0.0.1:9200/_cluster/health'
 {"cluster_name":"netology_cluster","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":8,"active_shards":8,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":10,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":44.44444444444444}
 ```
 Часть индексов находится в состоянии yellow, потому что мы не можем делать реплики на одном узле. Реплика это по сути резервная копия, которая должна хранится на другом узле.
-
+```json
+curl -X DELETE 'http://127.0.0.1:9200/ind-1'
+{"acknowledged":true}
+curl -X DELETE 'http://127.0.0.1:9200/ind-2'
+{"acknowledged":true}
+curl -X DELETE 'http://127.0.0.1:9200/ind-3'
+{"acknowledged":true}
+```
 
 
 ## Задача 3
