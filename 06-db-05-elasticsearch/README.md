@@ -127,7 +127,12 @@ health status index uuid                   pri rep docs.count docs.deleted store
 green  open   ind-1 ef2m-SKIS6O35NF0nSu1zQ   1   0          0            0       225b           225b
 yellow open   ind-3 8S2auZXvQxWIgib8eFTpWA   4   2          0            0       900b           900b
 yellow open   ind-2 apG5w2hLS8CYW2LX8y7HHg   2   1          0            0       450b           450b
+curl -X GET 'http://127.0.0.1:9200/_cluster/health'
+{"cluster_name":"netology_cluster","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":8,"active_shards":8,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":10,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":44.44444444444444}
 ```
+Часть индексов находится в состоянии yellow, потому что мы не можем делать реплики на одном узле. Реплика это по сути резервная копия, которая должна хранится на другом узле.
+
+
 
 ## Задача 3
 
