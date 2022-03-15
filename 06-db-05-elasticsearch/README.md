@@ -173,6 +173,11 @@ curl -X DELETE 'http://127.0.0.1:9200/ind-3'
 
 ---
 
+Ответ:
+```bash
+echo "path.repo: /var/lib/elasticsearch/snapshots" >> elasticsearch.yml
+
+
 ### Как cдавать задание
 
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
