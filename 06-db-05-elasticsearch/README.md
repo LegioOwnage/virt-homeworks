@@ -185,7 +185,36 @@ curl -X PUT http://127.0.0.1:9200/test -H 'Content-Type: application/json' -d'{"
 curl -X GET 'http://127.0.0.1:9200/_cat/indices?v'
 health status index uuid                   pri rep docs.count docs.deleted store.size pri.store.size
 green  open   test  8-Ze5uCrRvWfT7SFl5ASyA   1   0          0            0       225b           225b
+curl -X PUT http://127.0.0.1:9200/_snapshot/netology_backup/netology_snapshot
+{"accepted":true}
 ```
+```bash
+bash-4.2$ cd /var/lib/elasticsearch/snapshots
+bash-4.2$ ls -la
+total 44
+drwxr-sr-x 3 elasticsearch elasticsearch  4096 Mar 16 08:06 .
+drwxr-s--- 1 elasticsearch elasticsearch  4096 Mar 16 08:08 ..
+-rw-r--r-- 1 elasticsearch elasticsearch   850 Mar 16 08:06 index-0
+-rw-r--r-- 1 elasticsearch elasticsearch     8 Mar 16 08:06 index.latest
+drwxr-sr-x 4 elasticsearch elasticsearch  4096 Mar 16 08:06 indices
+-rw-r--r-- 1 elasticsearch elasticsearch 18369 Mar 16 08:06 meta-q3Gn9YDJSymFq3gteUrrtw.dat
+-rw-r--r-- 1 elasticsearch elasticsearch   358 Mar 16 08:06 snap-q3Gn9YDJSymFq3gteUrrtw.dat
+```
+```json
+curl -X PUT http://127.0.0.1:9200/test -H 'Content-Type: application/json' -d'{"settings": {"number_of_shards": 1, "number_of_replicas": 0}}'
+{"acknowledged":true}
+curl -X PUT http://127.0.0.1:9200/test-2 -H 'Content-Type: application/json' -d'{"settings": {"number_of_shards": 1, "number_of_replicas": 0}}'
+curl -X GET 'http://127.0.0.1:9200/_cat/indices?v'
+health status index  uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   test-2 W2yRBA5VRRW3QcKNfREcAg   1   0          0            0       225b           225b
+curl -X POST http://127.0.0.1:9200/_snapshot/netology_backup/netology_snapshot/_restore
+{"accepted":true}
+curl -X GET 'http://127.0.0.1:9200/_cat/indices?v'
+health status index  uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   test-2 W2yRBA5VRRW3QcKNfREcAg   1   0          0            0       225b           225b
+green  open   test   QO_ZVUtZQGaePsJzkO7tgg   1   0          0            0       225b           225b
+```
+
 
 ### Как cдавать задание
 
