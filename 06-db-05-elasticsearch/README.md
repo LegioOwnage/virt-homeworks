@@ -182,6 +182,9 @@ curl -X PUT http://127.0.0.1:9200/_snapshot/netology_backup -H 'Content-Type: ap
 {"acknowledged":true}
 curl -X PUT http://127.0.0.1:9200/test -H 'Content-Type: application/json' -d'{"settings": {"number_of_shards": 1, "number_of_replicas": 0}}'
 {"acknowledged":true,"shards_acknowledged":true,"index":"test"}
+curl -X GET 'http://127.0.0.1:9200/_cat/indices?v'
+health status index uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   test  8-Ze5uCrRvWfT7SFl5ASyA   1   0          0            0       225b           225b
 ```
 
 ### Как cдавать задание
