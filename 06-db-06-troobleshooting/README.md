@@ -63,6 +63,15 @@ InterfaceError: (InterfaceError) 2013: Lost connection to MySQL server during qu
 
 Какие пути решения данной проблемы вы можете предложить?
 
+Ответ:
+
+```bash
+Похоже на то, что сервер не справляется с возникшей нагрузкой. 
+Для решения этой проблемы можно попробовать увеличить net_read_timeout до 60 сек.
+А так же увеличить connect_timeout до 20 сек и проверить состояние сети. 
+Возможны потери пакетов или медленное соединение.
+```
+
 ## Задача 4
 
 Перед выполнением задания ознакомтесь со статьей [Common PostgreSQL errors](https://www.percona.com/blog/2020/06/05/10-common-postgresql-errors/) из блога Percona.
