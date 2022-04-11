@@ -24,7 +24,7 @@ locals {
 locals {
   vm_instance_count_map = {
     stage = 1
-    prod  = 1
+    prod  = 2
   }
 }
 
