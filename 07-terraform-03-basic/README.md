@@ -31,6 +31,8 @@ dynamodb.
 * Вывод команды `terraform plan` для воркспейса `prod`.  
 
 Ответы:
+https://user-images.githubusercontent.com/89036206/163226478-6936da26-da14-406b-a2b7-6a584542e023.png
+
 Файл terraform загрузил так же в репозиторий, отдельно описал count и for_each. Вывод ниже для for_each
 ```bash
 user@user:~/PycharmProjects/virt-homeworks/07-terraform-03-basic/terraform$ terraform workspace list
