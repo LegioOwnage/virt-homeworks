@@ -11,8 +11,8 @@ terraform {
     bucket     = "netologybackend"
     region     = "ru-central1"
     key        = "[terraform.workspace]/terraform.tfstate"
-    access_key = "YCAJEFC6Yrm4W7jaYDi9shG6G"
-    secret_key = "YCNlyDXD1rLMWc2T3QIH8KU7aaTo9CZDHFZqQQf7"
+    access_key = ""
+    secret_key = ""
 
     skip_region_validation      = true
     skip_credentials_validation = true
