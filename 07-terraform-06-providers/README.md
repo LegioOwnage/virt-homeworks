@@ -30,6 +30,12 @@
 
 ---
 
+Ответ:
+```bash
+1. https://github.com/hashicorp/terraform-provider-aws/blob/main/internal/provider/provider.go
+2. 
+```
+
 ### Как cдавать задание
 
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
